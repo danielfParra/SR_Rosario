@@ -93,7 +93,7 @@ ROOMS = [
 # e.g. self.session.config['participation_fee']
 
 SESSION_CONFIG_DEFAULTS = dict(
-    real_world_currency_per_point=1.00, participation_fee=5000, doc=""
+    real_world_currency_per_point=1.00, participation_fee=15000, doc=""
 )
 
 PARTICIPANT_FIELDS = ['role', 'sender_payoff_rounds', 'receiver_payoff_rounds', 'treatment', 'receiver_type', 'correct_answers', 'pool']

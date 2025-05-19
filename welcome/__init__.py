@@ -8,7 +8,7 @@ class Constants(BaseConstants):
     players_per_group = None
     num_rounds = 1
     BONUS_AMOUNT = Currency(4000)
-    SHOW_UP_FEE = Currency(5000)
+    SHOW_UP_FEE = Currency(15000)
 
 class Subsession(BaseSubsession):
     pass
