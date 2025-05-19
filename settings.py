@@ -57,8 +57,8 @@ SESSION_CONFIGS = [
         name='BOTs_sender_receiver_game_decode',
         display_name="BOTS Sender-Receiver Game: Decode",
         use_browser_bots=True,
-        num_demo_participants=16,
-        app_sequence=['consent', 'welcome', 'N4_sender_receiver_game', 'payment_info', 'survey'],
+        num_demo_participants=50,
+        app_sequence=['consent', 'welcome', 'N5_sender_receiver_game', 'payment_info', 'survey'],
         num_rounds=3,
         treatment='Decode'
     ),
