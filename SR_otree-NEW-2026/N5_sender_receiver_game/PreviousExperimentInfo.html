@@ -1,0 +1,77 @@
+{{ block title }}
+    Información del Experimento Anterior
+{{ endblock }}
+
+{{ block styles }}
+<!-- Load custom CSS styles -->
+<link rel="stylesheet" href="{{ static 'global/myStyle.css' }}">
+<link rel="stylesheet" href="{{ static 'global/myStyleButton.css' }}">
+{{ endblock }}
+
+{{ block content }}
+
+<div class="card border-info mb-3">
+    <div class="card-header bg-info text-dark fst-italic" style="font-size: 0.9em;">Información del Experimento Anterior</div>
+    <div class="card-body">
+
+        <h3><i class="fas fa-info-circle"></i> Contexto</h3>
+        <p>
+            Durante la sesión de hoy, observarás información que fue generada por participantes que hicieron parte de una sesión anterior de este mismo estudio.
+        </p>
+        <p>
+            En esa sesión anterior, a los participantes se les asignó el rol de <b>Jugador A</b> o <b>Jugador B</b>.
+            Hay un número secreto entre 1 y 7. La tarea del Jugador A era enviar un mensaje al Jugador B,
+            <b>sin conocer el número secreto</b>. El Jugador A podía enviar cualquier número entre 1 y 7,
+            o <b>delegar</b> la decisión al computador, en cuyo caso el mensaje contenía el número secreto verdadero.
+        </p>
+        <p>
+            Después de recibir el mensaje, el Jugador B adivinaba el número secreto.
+        </p>
+
+        <p>
+            <input id="info_button1" type="button" value="&#xf178" onclick="button_click(info_button1, paragraph1);" />
+        </p>
+
+        <div id="paragraph1" class="hidden-paragraph">
+
+            <h3><i class="fas fa-gamepad"></i> Tu Tarea de Hoy</h3>
+            <p>
+                Hoy, tu tarea está estrechamente relacionada con la tarea que enfrentó el Jugador B en la sesión anterior.
+                Leerás los <b>mensajes reales</b> que enviaron en el pasado los participantes con el rol de Jugador A.
+                Después de ver un mensaje, tendrás que <b>adivinar el número secreto</b>.
+            </p>
+
+            <p>
+                <input id="info_button2" type="button" value="&#xf178" onclick="buttonAppear(); button_click(info_button2, paragraph2);" />
+            </p>
+
+        </div>
+
+        <div id="paragraph2" class="hidden-paragraph">
+
+            <h3><i class="fas fa-book-open"></i> Sobre las Instrucciones de Abajo</h3>
+            <p>
+                Para ayudarte a entender las decisiones que tomaron los participantes anteriores, ahora te mostraremos
+                las mismas instrucciones que ellos recibieron. Todos los mensajes que observarás hoy fueron generados
+                bajo las reglas exactas descritas en esas instrucciones.
+            </p>
+            <p>
+                Como tu tarea comparte muchas características con la de los participantes que fueron Jugador B en la sesión anterior,
+                es importante que <b>leas estas instrucciones con atención</b>.
+            </p>
+
+        </div>
+
+    </div>
+</div>
+
+<div id="next" style="display: none">
+    <button class="otree-btn-next btn btn-primary">Continuar</button>
+</div>
+
+{{ endblock }}
+
+{% block scripts %}
+<script src="{% static 'global/myJs.js' %}"></script>
+<script src="https://kit.fontawesome.com/46026ecfac.js" crossOrigin="anonymous"></script>
+{% endblock %}

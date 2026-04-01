@@ -90,8 +90,8 @@ class Demographics(Page):
     def before_next_page(player, timeout_happened):
         player.payoff += 5000  # Add a bonus for completing the survey
 
-#class Redirect(Page):
-#    pass
+class Redirect(Page):
+    pass
 
 
-page_sequence = [Demographics]
+page_sequence = [Demographics, Redirect]

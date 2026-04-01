@@ -25,12 +25,8 @@ class PaymentInfo(Page):
         return dict(
             payoff=self.participant.payoff,  # total bonus from all apps
             show_up_fee=self.session.config['participation_fee'],
-            total_payment=self.participant.payoff_plus_participation_fee()+5000,  # total payment including show-up fee and bonus
-            finishing_bonus=Currency(5000), # bonus for finishing the experiment
+            total_payment=self.participant.payoff_plus_participation_fee()
         )
-
-# class Redirect(Page):
-#     pass
 
 
 page_sequence = [PaymentInfo]

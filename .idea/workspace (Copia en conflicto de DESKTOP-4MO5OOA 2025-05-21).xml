@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="6107c66c-204d-43b0-a2e8-57ec10673643" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/consent/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/consent/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2nFrbyrBxIIc1fGhNJFLFi4QFN7" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/danie/Dropbox (Personal)/Javeriana/Proyecto de Investigación/SR_test/payment_info&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\danie\Dropbox (Personal)\Javeriana\Proyecto de Investigación\SR_test\payment_info" />
+      <recent name="C:\Users\danie\Dropbox (Personal)\Javeriana\Proyecto de Investigación\SR_test\consent" />
+      <recent name="C:\Users\danie\Dropbox (Personal)\CheapTalk_Honesty\otree\2025-01-21-otree\survey" />
+      <recent name="C:\Users\danie\Dropbox (Personal)\CheapTalk_Honesty\otree\2025-01-21-otree\payment_info" />
+      <recent name="C:\Users\danie\Dropbox (Personal)\CheapTalk_Honesty\otree\2025-01-21-otree\sender_receiver_game" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\danie\Dropbox (Personal)\CheapTalk_Honesty\otree\2025-01-21-otree\decoding_task" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-6a121458b545-JavaScript-PY-251.25410.159" />
+        <option value="bundled-python-sdk-e0ed3721d81e-36ea0e71a18c-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-251.25410.159" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6107c66c-204d-43b0-a2e8-57ec10673643" name="Changes" comment="" />
+      <created>1728579740988</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1728579740988</updated>
+      <workItem from="1728579742185" duration="64000" />
+      <workItem from="1729196240591" duration="33000" />
+      <workItem from="1729294170509" duration="15000" />
+      <workItem from="1737646739924" duration="106000" />
+      <workItem from="1737659166533" duration="1248000" />
+      <workItem from="1737662487207" duration="2377000" />
+      <workItem from="1738938005072" duration="1879000" />
+      <workItem from="1739283018591" duration="316000" />
+      <workItem from="1739283365622" duration="5196000" />
+      <workItem from="1739290388454" duration="14488000" />
+      <workItem from="1739378344077" duration="7000" />
+      <workItem from="1739389407144" duration="1442000" />
+      <workItem from="1739888457100" duration="142000" />
+      <workItem from="1739888701300" duration="9637000" />
+      <workItem from="1739981274867" duration="826000" />
+      <workItem from="1740494224262" duration="66000" />
+      <workItem from="1740494334568" duration="2285000" />
+      <workItem from="1740497890852" duration="317000" />
+      <workItem from="1740512760181" duration="8302000" />
+      <workItem from="1740596624932" duration="6910000" />
+      <workItem from="1741184159345" duration="465000" />
+      <workItem from="1741195757815" duration="551000" />
+      <workItem from="1741207187838" duration="4475000" />
+      <workItem from="1741212517835" duration="1298000" />
+      <workItem from="1741213861948" duration="10616000" />
+      <workItem from="1741711882559" duration="28000" />
+      <workItem from="1741721064066" duration="47000" />
+      <workItem from="1741721332903" duration="1703000" />
+      <workItem from="1741790617480" duration="152000" />
+      <workItem from="1741790871878" duration="6926000" />
+      <workItem from="1741964702018" duration="10901000" />
+      <workItem from="1742222736864" duration="1761000" />
+      <workItem from="1742237458665" duration="229000" />
+      <workItem from="1742932418787" duration="1660000" />
+      <workItem from="1743022486762" duration="892000" />
+      <workItem from="1743173582027" duration="92000" />
+      <workItem from="1743429882636" duration="1223000" />
+      <workItem from="1743526416028" duration="54000" />
+      <workItem from="1747078811069" duration="309000" />
+      <workItem from="1747672753737" duration="117000" />
+      <workItem from="1747672938723" duration="1394000" />
+      <workItem from="1747689265557" duration="358000" />
+      <workItem from="1747690014990" duration="4129000" />
+      <workItem from="1747768775314" duration="924000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

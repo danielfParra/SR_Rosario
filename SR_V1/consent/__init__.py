@@ -39,8 +39,9 @@ def creating_session(subsession: Subsession):
         20: {'num_pools': 4, 'pool_size': 5},  # 4 pools of 5
         24: {'num_pools': 6, 'pool_size': 4},  # 6 pools of 4
         30: {'num_pools': 6, 'pool_size': 5},  # 6 pools of 5
-        45: {'num_pools': 9, 'pool_size': 5},  # 9 pools of 5
-        48: {'num_pools': 8, 'pool_size': 6},  # 8 pools of 6
+        40: {'num_pools': 8, 'pool_size': 5},  # 9 pools of 4
+        44: {'num_pools': 11, 'pool_size': 4},  # 9 pools of 4
+        48: {'num_pools': 12, 'pool_size': 4},  # 8 pools of 6
         50: {'num_pools': 10, 'pool_size': 5},  # 10 pools of 5
     }
 

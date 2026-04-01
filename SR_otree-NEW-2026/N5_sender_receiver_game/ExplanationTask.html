@@ -1,0 +1,110 @@
+{{ block title }}
+Una tarea más
+{{ endblock }}
+
+{{ block styles }}
+<!-- Cargar los estilos CSS personalizados -->
+<link rel="stylesheet" href="{% static 'global/myStyle.css' %}">
+<link rel="stylesheet" href="{% static 'global/myStyleButton.css' %}">
+{{ endblock }}
+
+{{ block content }}
+
+<div class="card bg-light m-3">
+    <div class="card-body">
+
+        <h3><i class="fa fa-pencil" aria-hidden="true"></i> Explica tu estrategia</h3>
+
+        <p>Ahora te pediremos que expliques brevemente cómo hiciste tus adivinanzas.</p>
+
+        <p><strong>Tu explicación</strong></p>
+        <p>Por favor escribe instrucciones claras que describan la regla o el método que usaste para
+             convertir el mensaje del Jugador A en tu adivinanza.</p>
+           <p>Imagina que le estás escribiendo instrucciones a una IA, por ejemplo ChatGPT, que debería reproducir
+             tus adivinanzas cuando vea los mismos mensajes.
+             No escribas un prompt completo: escribe solo la regla o el método que usabas para decidir qué número adivinar,
+             para que esa regla pueda incorporarse dentro de un prompt ya definido para ChatGPT.</p>
+        <ul>
+            <li>Describe tu regla general.</li>
+            <li>Sé lo más específico/a posible.</li>
+            <li>No listes tus adivinanzas ronda por ronda.</li>
+            <li>No escribas tus adivinanzas de nuevo.</li>
+            <li>Explica el método que usaste.</li>
+        </ul>
+
+        <p><strong>Cómo se usará tu explicación</strong></p>
+        <p>Después de la sesión, el computador seleccionará aleatoriamente 5 rondas de tu juego.</p>
+        <p>Para esas 5 rondas:</p>
+        <ul>
+            <li>Una IA (ChatGPT) recibirá:
+                <ul>
+                    <li>El mensaje que viste del Jugador A</li>
+                    <li>Las reglas originales del juego</li>
+                    <li>Tu explicación escrita</li>
+                </ul>
+            </li>
+            <li>La IA intentará reproducir tus adivinanzas en esas rondas usando tu explicación.</li>
+        </ul>
+
+        <p><strong>Cómo se calcula el bono</strong></p>
+        <p>Para cada una de las 5 rondas seleccionadas, comparamos tu adivinanza con la adivinanza de ChatGPT.</p>
+        <ul>
+          <li>Si la diferencia es de <strong>1 punto o menos</strong>, esa ronda cuenta como <strong>acierto</strong>.</li>
+          <li>Si la diferencia es mayor que 1 punto, esa ronda cuenta como <strong>no acierto</strong>.</li>
+        </ul>
+
+        <button type="button" class="btn btn-warning mb-2" data-bs-toggle="modal" data-bs-target="#formulaModal">
+          Detalles de la regla del bono
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="formulaModal" tabindex="-1" aria-labelledby="formulaModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+              <div class="modal-header d-flex justify-content-between align-items-center">
+                <h5 class="modal-title m-0" id="formulaModalLabel">Regla del bono por ronda</h5>
+                <button type="button" class="btn-close m-0" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <p>La regla utilizada es:</p>
+                <div class="card bg-light my-3">
+                  <div class="card-body text-center" style="font-size: 1rem;">
+                  <p class="mb-2"><strong>Ronda acertada</strong> si:</p>
+                  <p class="mb-0"><strong>|Tu adivinanza - Adivinanza de ChatGPT| ≤ 1</strong></p>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <p><strong>Bono final</strong></p>
+        <p>Puedes ganar un bono adicional de <strong>{{ Constants.EXPLANATION_BONUS }}</strong>.</p>
+        <p>Tu probabilidad de recibir el bono es el porcentaje de rondas acertadas entre las 5 seleccionadas.</p>
+        <p><strong>Ejemplo:</strong></p>
+        <ul>
+          <li>Si aciertas 3 de 5 rondas, tu probabilidad de bono es 3/5 = 60%.</li>
+          <li>Si aciertas 5 de 5 rondas, tu probabilidad de bono es 100%.</li>
+          <li>Si aciertas 0 de 5 rondas, tu probabilidad de bono es 0%.</li>
+        </ul>
+        <p><strong>Cuanto mejor permita tu explicación que ChatGPT reproduzca tus adivinanzas de forma cercana, mayor será tu posibilidad de recibir el bono.</strong></p>
+
+        <p class="mt-4">Por favor usa el recuadro de abajo para escribir tu explicación.</p>
+        <p><strong>Importante:</strong> Lo único de lo que debes preocuparte es describir, de la forma más clara posible, 
+            cómo decidías el número que querías adivinar.</p>
+        {{ formfield 'strategy_explanation' }}
+
+    </div>
+</div>
+
+<button class="otree-btn-next btn btn-primary">Continuar</button>
+
+{{ endblock }}
+
+{% block scripts %}
+<script src="{% static 'global/myJs.js' %}"></script>
+<script src="https://kit.fontawesome.com/46026ecfac.js" crossOrigin="anonymous"></script>
+{% endblock %}
