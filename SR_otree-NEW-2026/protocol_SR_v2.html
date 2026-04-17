@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protocol SR v2</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 40px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            color: #1a5490;
+            border-bottom: 3px solid #1a5490;
+            padding-bottom: 15px;
+            margin: 40px 0 20px 0;
+            font-size: 32px;
+        }
+        
+        h2 {
+            color: #2c5aa0;
+            border-left: 5px solid #2c5aa0;
+            padding-left: 15px;
+            margin: 30px 0 15px 0;
+            font-size: 24px;
+        }
+        
+        h3 {
+            color: #3d6bb3;
+            margin: 20px 0 10px 0;
+            font-size: 18px;
+        }
+        
+        h4 {
+            color: #555;
+            margin: 15px 0 8px 0;
+            font-size: 15px;
+        }
+        
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        
+        ul, ol {
+            margin: 15px 0 15px 40px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+        
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            font-size: 13px;
+            color: #d63384;
+        }
+        
+        pre {
+            background-color: #f4f4f4;
+            border-left: 4px solid #e74c3c;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+            overflow-x: auto;
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+        }
+        
+        pre code {
+            color: #333;
+            padding: 0;
+            background-color: transparent;
+            font-size: 12px;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 20px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        th {
+            background-color: #2c5aa0;
+            color: white;
+            padding: 12px;
+            text-align: left;
+            font-weight: bold;
+        }
+        
+        td {
+            border: 1px solid #ddd;
+            padding: 12px;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        
+        tr:hover {
+            background-color: #f0f0f0;
+        }
+        
+        blockquote {
+            border-left: 4px solid #ddd;
+            margin: 20px 0;
+            padding-left: 20px;
+            color: #666;
+            font-style: italic;
+        }
+        
+        a {
+            color: #1a5490;
+            text-decoration: none;
+            border-bottom: 1px dotted #1a5490;
+        }
+        
+        a:hover {
+            border-bottom: 1px solid #1a5490;
+            background-color: #f0f7ff;
+        }
+        
+        hr {
+            border: none;
+            border-top: 2px solid #ddd;
+            margin: 30px 0;
+        }
+        
+        .toc {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .toc ul {
+            list-style: none;
+            margin-left: 0;
+        }
+        
+        .toc li {
+            margin: 5px 0;
+            margin-left: 20px;
+        }
+        
+        .toc a {
+            color: #1a5490;
+        }
+        
+        @media print {
+            body {
+                background-color: white;
+                padding: 0;
+            }
+            
+            .container {
+                box-shadow: none;
+                padding: 0;
+                max-width: 100%;
+            }
+            
+            a {
+                color: #1a5490;
+            }
+            
+            a:visited {
+                color: #1a5490;
+            }
+            
+            h1, h2, h3, h4, h5, h6 {
+                page-break-after: avoid;
+            }
+            
+            ul, ol {
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 id="protocolo-poyecto-tilman-daniel">Protocolo Poyecto Tilman &amp; Daniel</h1>
+<h2 id="1-entorno-del-proyecto">1. Entorno del proyecto</h2>
+<p>Python del entorno virtual:</p>
+<p><code>.venv\Scripts\python.exe</code></p>
+<p>Preparación de sesión PowerShell:</p>
+<pre class="codehilite"><code class="language-powershell">Set-Location &quot;c:XXXX\SR_otree-NEW-2026&quot;
+$env:Path = &quot;$PWD\.venv\Scripts;&quot; + $env:Path
+</code></pre>
+
+<h2 id="3-checklist-de-produccion-antes-de-lanzar">3. Checklist de producción (antes de lanzar)</h2>
+<p>Verificar estos puntos en cada lanzamiento real:</p>
+<ol>
+<li>
+<p><code>DEBUG</code> desactivado:
+<code>$env:OTREE_PRODUCTION = "1"</code></p>
+</li>
+<li>
+<p>Protección de acceso activada:
+<code>$env:OTREE_AUTH_LEVEL = "STUDY"</code></p>
+</li>
+<li>
+<p>Comando de arranque correcto:
+<code>otree prodserver 8000</code></p>
+</li>
+</ol>
+<h2 id="2-arranque-recomendado-de-servidor-powershell">2. Arranque recomendado de servidor (PowerShell)</h2>
+<pre class="codehilite"><code class="language-powershell">Set-Location &quot;c:XXXX\SR_otree-NEW-2026&quot;
+$env:Path = &quot;$PWD\.venv\Scripts;&quot; + $env:Path
+$env:OTREE_PRODUCTION = &quot;1&quot;
+$env:OTREE_AUTH_LEVEL = &quot;STUDY&quot;
+otree prodserver 8000
+</code></pre>
+
+<p>URL local:</p>
+<p><code>http://localhost:8000</code></p>
+<h2 id="3-preparacion-de-la-sala-de-laboratorio">3. Preparación de la sala de laboratorio</h2>
+<p>Verifique que todos los computadores estén encendidos y que el navegador tenga la ventana
+del experimento cargada.
+Una vez estén listos, oprima F11 en cada computador para activar el modo pantalla completa.
+Esto evita que los participantes cambien de pestaña o usen otras aplicaciones.</p>
+<h2 id="4-dentro-del-laboratorio">4. Dentro del laboratorio</h2>
+<p>Una vez todos estén sentados y se haya ajustado el número de personas en el programa, leer en voz alta:</p>
+<p>"Bienvenidos y bienvenidas nuevamente al laboratorio y muchas gracias por venir.
+Por favor recuerden que, a partir de este momento, cualquier tipo de comunicación
+está prohibida. Si tienen alguna pregunta, simplemente levanten la mano y nos
+acercaremos a ayudarles y responder sus dudas individualmente.
+Les solicitamos evitar movimientos bruscos con los pies, ya que podrían apagar
+accidentalmente el computador. Por favor no abran otras pestañas ni salgan de la
+pestaña del experimento que tendrán en un momento en pantalla."</p>
+<p>Durante la sesión:</p>
+<ol>
+<li>No camine por los pasillos mientras los participantes toman sus decisiones.</li>
+<li>Quédese junto al computador-servidor en la sala.</li>
+<li>Monitoree la data en oTree hub.</li>
+</ol>
+<p>Si alguien abre una ventana diferente a la convencional, decir:</p>
+<p>"Estimados participantes, le recordamos que está prohibido abrir pestañas o aplicaciones distintas a la del estudio."</p>
+<h2 id="5-una-vez-los-participantes-vayan-finalizando">5. Una vez los participantes vayan finalizando</h2>
+<p>Leer en voz alta:</p>
+<p>“Apreciadas personas participantes: Les solicitamos permanecer en sus asientos si aún no han finalizado el formulario de pagos. Si ya lo han completado, les pedimos amablemente que se dirijan al casillero ubicado en la parte posterior de la sala, cerca de la puerta por la que ingresaron. Busquen aquel que corresponde con el número de su llave, retiren su celular y dejen la llave colgada dentro de la rendija del locker.</p>
+<p>En caso de tener alguna pregunta o consulta, por favor levanten la mano y con gusto les atenderemos. Les recordamos que pueden llevarse un código QR o escanear el que se encuentra en recepción para invitar a otras personas a participar en este tipo de proyectos.</p>
+<p>Asimismo, les recordamos que su pago lo recibirán máximo en tres días hábiles. Allí también se incluirá el bono de la tarea de replicación si se lo ganaron. Agradecemos sinceramente su participación y esperamos verles próximamente.”</p>
+    </div>
+    <script>
+        // Optional: Add print functionality
+        console.log('To save as PDF: Press Ctrl+P (or Cmd+P on Mac) and select "Save as PDF"');
+    </script>
+</body>
+</html>
